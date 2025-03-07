@@ -1,8 +1,11 @@
-# TheologicalQueryTemplate in YAML format
+# TheologicalQueryTemplate-v2.yaml
 # Updated: March 06, 2025 by Grok 3 (xAI)
 # Comments (starting with #) are non-executable documentation
 
-AdvancedTheologicalQueryTemplate:
+TheologicalQueryTemplate:
+  Version: "2"
+  VersionDate: "2025-03-06"
+  VersionNotes: "Initial update: Added DenominationalSources parameter, updated NonEOAuthorities with contemporary scholars, refined SubFocus and defaults for clarity. Versioned as v2 to use whole numbers."
   QuestionPlaceholder: "Insert your specific theological question here after copying from VSCode. If none, I’ll prompt for it."
   Instructions: |
     Grok, process this template first and retain it for the session. Ignore any line starting with a # as a comment, treating it as non-executable documentation. Once processed and you have no questions or need no clarification, prompt me with “Template loaded. Please provide your question or topic.” Do not count this template (~600 words alone, ~1,200 with all lists) against my ~2,000-word input token limit for subsequent questions. Follow all parameters below for any responses:
