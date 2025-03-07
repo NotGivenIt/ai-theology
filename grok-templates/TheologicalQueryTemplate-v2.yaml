@@ -1,0 +1,78 @@
+# TheologicalQueryTemplate in YAML format
+# Updated: March 06, 2025 by Grok 3 (xAI)
+# Comments (starting with #) are non-executable documentation
+
+AdvancedTheologicalQueryTemplate:
+  QuestionPlaceholder: "Insert your specific theological question here after copying from VSCode. If none, I’ll prompt for it."
+  Instructions: |
+    Grok, process this template first and retain it for the session. Ignore any line starting with a # as a comment, treating it as non-executable documentation. Once processed and you have no questions or need no clarification, prompt me with “Template loaded. Please provide your question or topic.” Do not count this template (~600 words alone, ~1,200 with all lists) against my ~2,000-word input token limit for subsequent questions. Follow all parameters below for any responses:
+
+  Parameters:
+    WordCap: "~3,000 words per response (default) or specify: [e.g., ~1,000/~5,000] (stop before output limit, e.g., ~4,096 tokens). After cap, conclude with “Continue? (Y/N)” to prompt proceeding."
+    CrossReferenceListsToInclude: "[Specify: e.g., AtonementAnalysis, DCW, EOAuthorities, None] (use if included/uncommented for consistency)."
+    Focus: "Eastern Orthodox (EO) perspective first (EOAuthorities as primary lens, if available), then compare with non-EO Christian views (e.g., Calvinism, Reformed), followed by Divine Council Worldview (DCW) alignment or contrast."
+    SubFocus: "[Specify: e.g., LiturgicalEmbodiment, HistoricalDevelopment, MetaphysicalCritique, UserDefined (provide your own), None (default)] (refines EO lens or adapts to user-specified focus)."
+    Structure: "Theological nuances, scriptural basis, logical fallacies in arguments (if LogicalFallacyAnalysis: Yes), practical implications (optional subheadings: PersonalApplication, ChurchPractice)."
+    LogicalFallacyAnalysis: "[Specify: Yes, No (default)] (if Yes, include analysis of logical fallacies—detection, explanation, proof—in arguments or interpretations, allocating ~500–1,000 words within WordCap, or suggest higher WordCap if needed)."
+    BibleTranslationPreferences: "All scriptural references must use the Net Bible version 2 (NET v2), including relevant commentary or translator notes to enrich analysis. Identify and explain instances where questions or arguments depend on specific English translations (e.g., KJV, ESV), noting where other translations (e.g., NIV, NRSV) might undermine or differ, with examples and detailed explanations. For recurring motifs (e.g., wrath, atonement), provide full translation analysis once, then cross-reference (e.g., “See [section]”) to maintain depth without redundancy."
+    DenominationalSources: "[Specify: Yes (default), No] (if Yes, reference official statements of faith, catechisms, or confessional documents relevant to the Focus denominations—e.g., EO: Longer Catechism of Philaret; Roman Catholic: Catechism of the Catholic Church; Reformed: Westminster Confession; Lutheran: Book of Concord; Wesleyan: Articles of Religion. Cite specific sections with analysis, e.g., ‘WCF 11.1 on justification,’ and compare with scripture, e.g., Rom 5:1 NET v2. Allocate ~300–500 words within WordCap for this, or suggest higher WordCap if extensive)."
+    WritingQualityAndStyle: "Provide a comprehensive, academically rigorous analysis tailored for a theological, biblical scholars, and philosophical audience without requiring Greek or Hebrew knowledge, with high specificity and depth in every section and subsection."
+    TOCProcess: "Generate a detailed Table of Contents (TOC) first (TOCScope: Detailed [default], Flexible [broad topics with iterative subsections], None [exploratory]). Prompt “TOC complete. Approve to proceed with full response? (Y/N).” If approved, write per TOC, prompting “Proceed to [section/subsection]? (Y/N)” after each, following all parameters. For Flexible TOC, outline broad sections, refining subsections iteratively; for None, proceed exploratorily."
+    ReplyGuidance: "Include instructions/reminders, e.g., “Start TOC,” “Start paper - approx. 15,000 words total across ~5 replies at specified/default ~3,000 words each,” “Need to feed articles/information before question/request,” tailored to scope/input status."
+
+  CrossReferenceLists:
+    AtonementAnalysis:
+      ConceptualConcepts: "Reconciliation (restored relationship, 2 Cor 5:18-19 NET v2), Forgiveness (sin pardoned, Col 1:13-14 NET v2), Sacrifice (offering for sin, Heb 9:22 NET v2), Propitiation (appeasing wrath, Rom 3:25 NET v2), Expiation (cleansing sin, 1 Jn 2:2 NET v2), Satisfaction (restoring honor/justice), Redemption (liberation, Mk 10:45 NET v2), Restoration (healing/renewal, Rom 8:19-21 NET v2), Covenant (relational promise, Heb 8:10 NET v2)"
+      Theories: "Ransom [Recapitulation (Irenaeus, undoing Adam, Rom 5:19 NET v2), Divinization/Theosis (Athanasius, divine nature, 2 Pet 1:4 NET v2), Vicarious Substitute (Cyril, representation, Heb 2:17 NET v2)], Satisfaction (Anselm), Penal Substitution (PSA, wrath borne, Isa 53:5 NET v2), Moral Influence (Abelard, love inspires, 1 Pet 2:21 NET v2), Christus Victor (Aulén, powers defeated, Col 2:15 NET v2), Participation (union with God, Jn 17:21 NET v2), Governmental (Grotius, justice upheld, Isa 42:21 NET v2), Divine Council Worldview (DCW) (Heiser, cosmic rebellion/redemption; elohim disrupt order—Gen 3: serpent, Gen 6: Nephilim, Gen 11: Babel—Christ triumphs, Col 2:15 NET v2; integrates Ransom, Christus Victor, Participation via Bates’ allegiance, Imes’ image restoration, Staples’ covenant Israel)"
+      Themes: "Sin (guilt/corruption/bondage), Divine Justice (wrath/honor/order), Human Destiny (forgiveness/liberation/divinization), Cosmic Scope (individual/communal/universal; Rebellion—Gen 3 NET v2, DCW; Redemption—Col 2:15 NET v2, Eph 1:10 NET v2), Christ’s Role (substitute/victor/example/mediator)"
+    DCW:
+      Summary: "The Divine Council Worldview (DCW) (Heiser, cosmic rebellion/redemption): Yahweh rules elohim council (Ps 82 NET v2, Deut 32:8-9 NET v2); three rebellions—Gen 3 (serpent/elohim, NET v2: “shining being”), Gen 6 (Nephilim), Gen 11 (Babel)—disrupt order. Christ triumphs (Col 2:15 NET v2), restoring humans as image-bearers (Imes). Integrates Ransom (recapitulation), Christus Victor (cosmic victory), Participation (theosis); PSA possible (sin’s rift, Rom 3:25 NET v2). Enhanced by Van Dorn (soteriology), Johnson/Chu (DCW dissemination). Ties to ANE (cosmic context), Second Temple (angelology), NPP (redemption)."
+    EOAuthorities:
+      Summary: "Eastern Orthodox Fathers—John of Damascus (theology synthesis), Maximus the Confessor (cosmic Christology, theosis), Gregory Palamas (hesychasm, divine energies), Gregory of Nazianzus (Trinity, redemption), Athanasius of Alexandria (theosis, incarnation, 2 Pet 1:4 NET v2), Symeon the New Theologian (mystical union), Basil of Caesarea (creation, liturgy), Cyril of Alexandria (Christology, atonement, Heb 2:17 NET v2), Pseudo-Dionysius the Areopagite (metaphysics, divine simplicity, 1 Jn 4:8 NET v2). Recent EO Theologians—Dumitru Stăniloaie (personalist theosis), Vladimir Lossky (mystical theology, apophaticism), Georges Florovsky (neo-patristic synthesis), John Meyendorff (Palamite theology), Michael Pomazansky (dogmatic clarity). Use: Primary EO lens for opinions (if available), short-cut for comparative analysis with non-EO (e.g., Augustine, Calvin) or DCW (Heiser). Ties to Participation, Restoration."
+    NonEOAuthorities:
+      Summary: "Key figures representing major non-Eastern Orthodox Christian denominations, updated with contemporary scholars for comparative analysis with EO and DCW perspectives."
+      RomanCatholic:
+        Commonality: "Sacramental theology, infused righteousness, tradition alongside scripture."
+        Figures:
+          - "Augustine of Hippo (354–430): Original sin, grace (Rom 5:12 NET v2)—shared with Reformed but sacramental focus."
+          - "Thomas Aquinas (1225–1274): Satisfaction theory precursor (Rom 3:25 NET v2)—influences Anselm, merit and grace."
+          - "Scott Hahn (1957–): Covenant theology, sacramental atonement (Rom 5:1 NET v2)."
+          - "Brant Pitre (1975–): Jewish roots, liturgical redemption (Jn 1:29 NET v2)."
+      Lutheran:
+        Commonality: "Justification by faith alone (sola fide), sacramental realism, forensic yet relational atonement."
+        Figures:
+          - "Martin Luther (1483–1546): Sola fide, Christus Victor integration (Gal 3:13 NET v2)—nuances PSA."
+          - "Philipp Melanchthon (1497–1560): Forensic justification (Rom 5:1 NET v2), sacramental focus."
+          - "Robert Kolb (1941–): Forensic justification, modern Lutheran theology (Gal 3:13 NET v2)."
+          - "Cheryl Peterson (1968–): Ecclesiology, contemporary Lutheran soteriology (Rom 5:17 NET v2)."
+      ReformedCalvinist:
+        Commonality: "Predestination, total depravity, forensic PSA, imputed righteousness."
+        Figures:
+          - "John Calvin (1509–1564): PSA, predestination (Rom 5:9 NET v2)—core to forensic atonement."
+          - "Charles Hodge (1797–1878): Systematic PSA (Rom 5:1 NET v2)—TULIP emphasis."
+          - "John Murray (1898–1975): Forensic redemption (Rom 5:1 NET v2)—deepens legal frame."
+          - "R.C. Sproul (1939–2017): Contemporary PSA (Isa 53:5 NET v2)—popularizes wrath focus."
+          - "Kevin Vanhoozer (1957–): Theological aesthetics, nuanced PSA critique (Isa 53:5 NET v2)."
+          - "Michael Horton (1964–): Covenant theology, modern Reformed apologetics (Rom 8:29 NET v2)."
+      WesleyanArminian:
+        Commonality: "Free will, prevenient grace, moral influence/governmental atonement, sanctification focus."
+        Figures:
+          - "John Wesley (1703–1791): Moral influence, sanctification (1 Pet 2:21 NET v2)—softens PSA."
+          - "Richard Watson (1781–1833): Governmental theory (Rom 3:26 NET v2)—justice demonstration."
+          - "Jacobus Arminius (1560–1609): Free will, universal atonement (1 Jn 2:2 NET v2)—contrasts predestination."
+          - "Ben Witherington III (1951–): Socio-rhetorical exegesis, sanctification (1 Pet 2:21 NET v2)."
+          - "Thomas Oden (1931–2016): Paleo-orthodoxy, Wesleyan renewal (Rom 3:26 NET v2)."
+      AnglicanBroadChurch:
+        Commonality: "Middle way—sacramental, evangelical, and catholic elements; atonement varies (PSA, moral influence)."
+        Figures:
+          - "Richard Hooker (1554–1600): Sacramental theology, moral influence (Rom 5:1 NET v2)—nuances PSA."
+          - "N.T. Wright (1948–): New Perspective on Paul, covenant victory (Col 2:15 NET v2)—broadens atonement."
+          - "Katherine Sonderegger (1951–): Systematic theology, divine simplicity (1 Jn 4:8 NET v2)."
+      PentecostalCharismatic:
+        Commonality: "Emphasis on Spirit, healing, victory over powers, experiential atonement."
+        Figures:
+          - "William J. Seymour (1870–1922): Healing, Spirit empowerment (Acts 2:4 NET v2)—echoes victory."
+          - "Gordon Fee (1934–2012): Pneumatology, victory atonement (1 Cor 15:54 NET v2)—softens legalism."
+          - "Craig Keener (1960–): NT scholarship, Spirit-empowered victory (Acts 2:4 NET v2)."
+          - "Amos Yong (1965–): Pneumatology, global theology (1 Cor 15:54 NET v2)."
+      Use: "Primary lens for non-EO Christian views by denomination for comparison with EO (e.g., theosis—2 Pet 1:4 NET v2) and DCW (e.g., cosmic redemption—Col 2:15 NET v2) perspectives. Ties to Satisfaction, Penal Substitution, Moral Influence, Christus Victor."
