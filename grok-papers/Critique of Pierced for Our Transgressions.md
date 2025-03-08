@@ -1,4 +1,4 @@
-# **A Comprehensive Critique of Penal Substitutionary Atonement and Reformed
+# **A Comprehensive Critique of Penal Substitutionary Atonement and Reformed**
 Theology in Pierced for Our Transgressions**
 
 Below is the Introduction (Section 1) of the paper titled *A Comprehensive
